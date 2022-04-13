@@ -1,0 +1,138 @@
+:root {
+  --color-primary-soft-blue: hsl(215, 51%, 70%);
+  --color-primary-cyan: hsl(178, 100%, 50%);
+
+  --color-main-BG: hsl(217, 54%, 11%);
+  --color-card-BG: hsl(216, 50%, 16%);
+  --color-blue-line: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+.container {
+  max-width: 114rem;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: var(--color-main-BG);
+  position: relative;
+}
+.card {
+  width: 30rem;
+  padding: 2rem;
+  display: grid;
+  grid-gap: 2rem;
+  background-color: var(--color-card-BG);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__image--cover {
+  height: 25rem;
+  border-radius: 1rem;
+  background-image: url(../images/image-equilibrium.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all 0.3s;
+}
+.card__image--eye {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  transition: all 0.3s;
+}
+.card__image--cover:hover {
+  background-image: linear-gradient(
+      rgba(0, 255, 247, 0.5),
+      rgba(0, 255, 247, 0.5)
+    ),
+    url(../images/image-equilibrium.jpg);
+}
+.card__image--cover:hover .card__image--eye {
+  display: block;
+}
+.card__heading {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.card__text {
+  color: var(--color-primary-soft-blue);
+  font-size: 1.5rem;
+}
+.card__pt {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  justify-content: space-between;
+}
+.card__image-etherum,
+.card__image-clock {
+  height: 2rem;
+}
+.card__price,
+.card__time {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2rem 1fr;
+  grid-column-gap: 2px;
+}
+.card__price--text {
+  color: var(--color-primary-cyan);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.card__time--text {
+  color: var(--color-primary-soft-blue);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.card-border {
+  display: block;
+  border: 1px solid var(--color-blue-line);
+}
+.card__user {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  align-items: center;
+  grid-column-gap: 2rem;
+}
+.card__user--image {
+  width: 4rem;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+}
+.card__user--name {
+  color: var(--color-primary-soft-blue);
+  font-size: 1.5rem;
+}
+.user-name {
+  color: var(--color-white);
+  transition: color 0.3s;
+}
+.card__heading:hover,
+.user-name:hover {
+  color: var(--color-primary-cyan);
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 8px;
+  }
+}
