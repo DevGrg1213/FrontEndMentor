@@ -20,7 +20,7 @@ submitBtn.addEventListener("click", (e) => {
     <img
       src="./images/illustration-thank-you.svg"
       alt="thank you image"
-      class="card__image--thankyou block__center"
+      class="card__image-thankyou block__center"
     />
     <p class="card__score">You selected ${selected} out of 5</p>
     <h2 class="card__heading">Thank you!</h2>
