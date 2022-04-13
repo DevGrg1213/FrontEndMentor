@@ -10,7 +10,7 @@ ratingNumber.forEach((item, i, arr) => {
       el.classList.remove("active");
     });
     item.classList.toggle("active");
-    selected = item.getAttribute("value");
+    selected = item.classList[1];
   });
 });
 
