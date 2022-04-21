@@ -35,12 +35,14 @@ body {
   max-width: 144rem;
   margin: 0 auto;
 }
+
+/* header */
 .header {
   background-image: url("../images/desktop/image-header.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
-  text-align: center;
+  /* text-align: center; */
   position: relative;
 }
 .nav {
@@ -64,6 +66,10 @@ body {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--color-White);
+  transition: all 0.3s;
+}
+.menu__link:hover {
+  color: var(--color-Very-dark-desaturated-blue);
 }
 .btn {
   text-decoration: none;
@@ -78,6 +84,11 @@ body {
   background-color: var(--color-White);
   padding: 1.5rem 2rem;
   border-radius: 10rem;
+  transition: all 0.3s;
+}
+.btn-white:hover {
+  background: rgb(173, 197, 246);
+  color: var(--color-White);
 }
 .heading__primary {
   color: var(--color-White);
@@ -85,14 +96,14 @@ body {
   font-family: 900;
   text-transform: uppercase;
   font-size: 5rem;
+  text-align: center;
   letter-spacing: 1rem;
 }
 .icon-arrow {
-  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -35%);
+  transform: translate(-50%, -50%);
   height: 10rem;
 }
 
